@@ -76,6 +76,28 @@
         color: #dacbb6;
       }
 
+      /* widget WhatsApp */
+      .whatsapp-widget {
+        transition: all 0.3s ease;
+      }
+      .whatsapp-widget:hover {
+        transform: scale(1.1);
+      }
+      .pulse-animation {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
       @media (max-width: 600px) {
         .hero-bg {
           background-image: url("img/banner-mobile.png");
@@ -163,9 +185,10 @@
             Seus direitos em saúde não podem esperar.
           </h1>
           <p class="text-xl mb-8 pr-50">
-            Negativas de cobertura, reajustes abusivos e medicamentos caros
-            exigem ação imediata. Atuamos para garantir seu acesso ao
-            tratamento.
+            Negativas de cobertura, reajustes abusivos e medicamentos de alto
+            custo exigem respostas rápidas e eficazes. Somos especialistas em
+            Direito da Saúde e atuamos de forma imediata para garantir os seus
+            direitos.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a
@@ -247,8 +270,8 @@
               Reajustes Abusivos nas Mensalidades
             </h3>
             <p class="mb-4">
-              O reajuste deve obedecer a critérios legais e normativos. Contudo,
-              muitos planos aplicam aumentos indevidos, como:
+              O reajuste deve obedecer a critérios legais e atos normativos.
+              Contudo, muitos planos aplicam aumentos indevidos, como:
             </p>
             <ul class="mb-4 space-y-2">
               <li>
@@ -292,7 +315,7 @@
             <p class="mb-4">
               O fornecimento de medicamentos, ainda que não estejam no rol da
               ANS, pode ser exigido judicialmente quando houver indicação médica
-              fundamentada.
+              fundamentada e registro na ANVISA.
             </p>
             <ul class="mb-6 space-y-2">
               <li>
@@ -337,10 +360,13 @@
                 <span>Recusa de cirurgias</span>
               </li>
               <li>
-                <span>Falta de medicamentos essenciais</span>
+                <span
+                  >Falta de medicamento essencial prescrito por médico
+                  especialista e que tenha registro e aprovação na ANVISA
+                </span>
               </li>
               <li>
-                <span>Ausência de exames urgentes</span>
+                <span>Negativa ou demora de exames urgentes</span>
               </li>
             </ul>
             <a
@@ -418,11 +444,12 @@
             </div>
             <div>
               <h3 class="text-xl font-bold mb-2 text-dark">
-                Histórico sólido de vitórias judiciais
+                Especialistas na área
               </h3>
               <p>
-                Já ajudamos centenas de clientes a garantirem seus direitos à
-                saúde com resultados comprovados.
+                Contamos com profissionais altamente qualificados e experientes,
+                preparados para oferecer soluções rápidas e eficazes para o seu
+                caso.
               </p>
             </div>
           </div>
@@ -575,9 +602,10 @@
             <div class="faq-answer mt-2 hidden">
               <p class="text-gray-700">
                 Não, o plano de saúde não pode negar tratamentos indicados por
-                médicos especialistas, desde que haja comprovação da necessidade
-                através de laudos e exames. Essa é uma prática abusiva que
-                combatemos judicialmente.
+                médicos especialistas. É importante ter a comprovação da
+                necessidade do tratamento através de laudos e exames, além da
+                necessidade do medicamento ser autorizado pela ANVISA. Essa é
+                uma prática abusiva que combatemos judicialmente.
               </p>
             </div>
           </div>
@@ -599,7 +627,7 @@
                 plano. Se não houver resposta ou a justificativa for
                 insatisfatória, entre em contato conosco. Podemos analisar seu
                 caso e, se necessário, entrar com ação judicial para suspender o
-                aumento indevido.
+                aumento indevido e reaver o que você pagou de forma indevida.
               </p>
             </div>
           </div>
@@ -620,10 +648,10 @@
             <div class="faq-answer mt-2 hidden">
               <p class="text-gray-700">
                 Mesmo que o medicamento não esteja no rol da ANS, ele pode ser
-                exigido judicialmente quando há indicação médica fundamentada.
-                Nós podemos ajudar a reunir toda a documentação necessária e
-                entrar com uma ação urgente para garantir seu direito ao
-                tratamento.
+                exigido judicialmente quando há indicação médica fundamentada e
+                há registro na ANVISA. Nós podemos ajudar a reunir toda a
+                documentação necessária e entrar com uma ação urgente para
+                garantir seu direito ao tratamento.
               </p>
             </div>
           </div>
@@ -666,11 +694,11 @@
             </button>
             <div class="faq-answer mt-2 hidden">
               <p class="text-gray-700">
-                Em casos urgentes (como tratamentos de câncer ou emergências),
-                conseguimos liminares em poucos dias. Para outros casos, o prazo
-                médio é de 15 a 30 dias. Nossa equipe trabalha com agilidade
-                para garantir que você tenha acesso ao tratamento no menor tempo
-                possível.
+                Em casos urgentes (como tratamentos de câncer ou emergências), é
+                comum que o Judiciário analise o pedido com celeridade, muitas
+                vezes em poucos dias. Para outros casos, o prazo médio é de 15
+                dias. Nossa equipe trabalha com agilidade para garantir que você
+                tenha acesso ao tratamento no menor tempo possível.
               </p>
             </div>
           </div>
@@ -796,6 +824,19 @@
       </div>
     </footer>
 
+    <!-- WhatsApp Widget -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <a
+        href="https://wa.me/5519999401145?text=Gostaria%20de%20garantir%20meu%20direito%20%C3%A0%20sa%C3%BAde"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-widget bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center pulse-animation"
+        aria-label="Contato via WhatsApp"
+      >
+        <i data-feather="message-circle" class="w-8 h-8"></i>
+      </a>
+    </div>
+
     <script>
       // Mobile menu toggle
       const mobileMenuButton = document.getElementById("mobile-menu-button");
@@ -827,6 +868,16 @@
 
       // Feather icons replacement
       feather.replace();
+
+      //widget WhatsApp
+      feather.replace();
+
+      // Remove pulse animation after first click
+      document
+        .querySelector(".whatsapp-widget")
+        .addEventListener("click", function () {
+          this.classList.remove("pulse-animation");
+        });
     </script>
   </body>
 </html>
